@@ -13,6 +13,7 @@
 		EF7B88A425765CBD00B5F327 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88A325765CBD00B5F327 /* MapView.swift */; };
 		EF7B88A825765D3B00B5F327 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88A725765D3B00B5F327 /* MapViewModel.swift */; };
 		EF7B88AB25766D1000B5F327 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88AA25766D1000B5F327 /* Model.swift */; };
+		EF7B88AE2576709100B5F327 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88AD2576709100B5F327 /* MapAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		EF7B88A325765CBD00B5F327 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		EF7B88A725765D3B00B5F327 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		EF7B88AA25766D1000B5F327 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EF7B88AD2576709100B5F327 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				EF7B888F257659F600B5F327 /* map_sampleApp.swift */,
 				EF7B88A325765CBD00B5F327 /* MapView.swift */,
 				EF7B88A725765D3B00B5F327 /* MapViewModel.swift */,
+				EF7B88AD2576709100B5F327 /* MapAnnotationView.swift */,
 				EF7B88AA25766D1000B5F327 /* Model.swift */,
 				EF7B8893257659F700B5F327 /* Assets.xcassets */,
 				EF7B8898257659F700B5F327 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7B88AE2576709100B5F327 /* MapAnnotationView.swift in Sources */,
 				EF7B88A425765CBD00B5F327 /* MapView.swift in Sources */,
 				EF7B8890257659F600B5F327 /* map_sampleApp.swift in Sources */,
 				EF7B88A825765D3B00B5F327 /* MapViewModel.swift in Sources */,
