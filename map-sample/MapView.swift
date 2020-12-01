@@ -20,8 +20,11 @@ struct MapView: View {
                 coordinateRegion: $viewModel.region,
                 interactionModes: .all,
                 showsUserLocation: true,
-                userTrackingMode: $viewModel.trackingMode
-            )
+                userTrackingMode: $viewModel.trackingMode,
+                annotationItems: viewModel.items
+            ) { item in
+                MapMarker(coordinate: item.coordinate, tint: item.color)
+            }
             .ignoresSafeArea()
             
             HStack(spacing: 24.0) {
