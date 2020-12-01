@@ -46,6 +46,11 @@ final class MapViewModel: NSObject, ObservableObject {
     func requestUserLocation() {
         manager.startUpdatingLocation()
     }
+    
+    /// MapItemをクリア.
+    func removeItems() {
+        items.removeAll()
+    }
 }
 
 extension MapViewModel: CLLocationManagerDelegate {

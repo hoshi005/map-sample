@@ -34,6 +34,16 @@ struct MapView: View {
             
             HStack(spacing: 24.0) {
                 
+                // MapItemのクリアボタン.
+                Button(action: {
+                    viewModel.removeItems()
+                }, label: {
+                    Image(systemName: "mappin.slash")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 44.0, height: 44.0)
+                })
+                
                 // 位置情報リクエストボタン.
                 Button(action: {
                     viewModel.requestUserLocation()
