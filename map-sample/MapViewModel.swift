@@ -35,5 +35,13 @@ extension MapViewModel: CLLocationManagerDelegate {
     // 位置情報関連の権限に変更があったら呼び出される.
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print(#function)
+        
+        if manager.authorizationStatus == .authorizedWhenInUse {
+            print(#function, "権限があるので位置情報をリクエスト.")
+            manager.startUpdatingLocation()
+        } else {
+            print(#function, "権限がないので権限をリクエスト.")
+            manager.requestWhenInUseAuthorization()
+        }
     }
 }
