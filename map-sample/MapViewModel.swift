@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import Combine
 
 final class MapViewModel: NSObject, ObservableObject {
     
@@ -24,9 +25,21 @@ final class MapViewModel: NSObject, ObservableObject {
     
     @Published var trackingMode: MapUserTrackingMode = .follow
     
+    @Published var items: [MapItem] = []
+    
+    private var cancellable = Set<AnyCancellable>()
+    
     override init() {
         super.init()
         manager.delegate = self
+        
+        $region
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .sink { [weak self] region in
+                let annotation = MapItem(coordinate: region.center, color: .blue)
+                self?.items.append(annotation)
+            }
+            .store(in: &cancellable)
     }
     
     /// 位置情報のリクエスト.
