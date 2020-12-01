@@ -44,4 +44,18 @@ extension MapViewModel: CLLocationManagerDelegate {
             manager.requestWhenInUseAuthorization()
         }
     }
+    
+    // 位置情報が更新されたら呼び出される.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(#function)
+        
+        manager.stopUpdatingLocation()
+        
+        guard let location = locations.first else { return }
+        
+        // 取得した位置情報を reigon.center に与える.
+        withAnimation {
+            region.center = location.coordinate
+        }
+    }
 }
