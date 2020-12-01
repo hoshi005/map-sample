@@ -38,6 +38,13 @@ extension MapViewModel: CLLocationManagerDelegate {
         
         if manager.authorizationStatus == .authorizedWhenInUse {
             print(#function, "権限があるので位置情報をリクエスト.")
+            
+            // 正確な位置情報を利用する権限があるかどうか.
+            if manager.accuracyAuthorization != .fullAccuracy {
+                // 正確な位置情報をリクエスト.
+                manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: "full_accuracy_message")
+            }
+            
             manager.startUpdatingLocation()
         } else {
             print(#function, "権限がないので権限をリクエスト.")
