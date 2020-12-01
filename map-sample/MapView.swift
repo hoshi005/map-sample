@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     
     var body: some View {
-        Text("Hello, World!")
+        Map(
+            coordinateRegion: $viewModel.region,
+            interactionModes: .all,
+            showsUserLocation: true,
+            userTrackingMode: $viewModel.trackingMode
+        )
+        .ignoresSafeArea()
     }
 }
 
