@@ -8,7 +8,9 @@
 import SwiftUI
 import MapKit
 
-final class MapViewModel: ObservableObject {
+final class MapViewModel: NSObject, ObservableObject {
+    
+    private let manager = CLLocationManager()
     
     // 初期表示の座標.
     @Published var region = MKCoordinateRegion(
@@ -21,4 +23,17 @@ final class MapViewModel: ObservableObject {
     )
     
     @Published var trackingMode: MapUserTrackingMode = .follow
+    
+    override init() {
+        super.init()
+        manager.delegate = self
+    }
+}
+
+extension MapViewModel: CLLocationManagerDelegate {
+    
+    // 位置情報関連の権限に変更があったら呼び出される.
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        print(#function)
+    }
 }
