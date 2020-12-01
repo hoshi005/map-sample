@@ -23,7 +23,12 @@ struct MapView: View {
                 userTrackingMode: $viewModel.trackingMode,
                 annotationItems: viewModel.items
             ) { item in
-                MapMarker(coordinate: item.coordinate, tint: item.color)
+                MapAnnotation(
+                    coordinate: item.coordinate,
+                    anchorPoint: CGPoint(x: 0.5, y: 1.0)
+                ) {
+                    MapAnnotationView(item: item)
+                }
             }
             .ignoresSafeArea()
             
