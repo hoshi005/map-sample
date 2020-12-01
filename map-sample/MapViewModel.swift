@@ -28,6 +28,11 @@ final class MapViewModel: NSObject, ObservableObject {
         super.init()
         manager.delegate = self
     }
+    
+    /// 位置情報のリクエスト.
+    func requestUserLocation() {
+        manager.startUpdatingLocation()
+    }
 }
 
 extension MapViewModel: CLLocationManagerDelegate {
