@@ -13,13 +13,31 @@ struct MapView: View {
     @StateObject private var viewModel = MapViewModel()
     
     var body: some View {
-        Map(
-            coordinateRegion: $viewModel.region,
-            interactionModes: .all,
-            showsUserLocation: true,
-            userTrackingMode: $viewModel.trackingMode
-        )
-        .ignoresSafeArea()
+        
+        ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
+            
+            Map(
+                coordinateRegion: $viewModel.region,
+                interactionModes: .all,
+                showsUserLocation: true,
+                userTrackingMode: $viewModel.trackingMode
+            )
+            .ignoresSafeArea()
+            
+            HStack(spacing: 24.0) {
+                
+                // 位置情報リクエストボタン.
+                Button(action: {
+                    viewModel.requestUserLocation()
+                }, label: {
+                    Image(systemName: "dot.circle.and.cursorarrow")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 44.0)
+                })
+            }
+            .padding(24.0)
+        }
     }
 }
 
