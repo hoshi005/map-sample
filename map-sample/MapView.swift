@@ -66,6 +66,15 @@ struct MapView: View {
                 })
             }
             .padding(24.0)
+            
+            // アノテーションが選択されたら、詳細画面を前面に表示する.
+            if showModal {
+                DetailView(
+                    mapItem: $selectedItem,
+                    showModal: $showModal,
+                    namespace: namespace
+                )
+            }
         }
     }
 }
