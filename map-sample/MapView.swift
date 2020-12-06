@@ -12,6 +12,8 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     
+    @Namespace var namespace
+    
     var body: some View {
         
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
@@ -27,7 +29,7 @@ struct MapView: View {
                     coordinate: item.coordinate,
                     anchorPoint: CGPoint(x: 0.5, y: 1.0)
                 ) {
-                    MapAnnotationView(item: item)
+                    MapAnnotationView(item: item, namespace: namespace)
                 }
             }
             .ignoresSafeArea()
