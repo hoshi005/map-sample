@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF6AB053257C6B5300A7A42A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AB052257C6B5300A7A42A /* DetailView.swift */; };
 		EF7B8890257659F600B5F327 /* map_sampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B888F257659F600B5F327 /* map_sampleApp.swift */; };
 		EF7B8894257659F700B5F327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7B8893257659F700B5F327 /* Assets.xcassets */; };
 		EF7B8897257659F700B5F327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7B8896257659F700B5F327 /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF6AB052257C6B5300A7A42A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EF7B888C257659F600B5F327 /* map-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7B888F257659F600B5F327 /* map_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_sampleApp.swift; sourceTree = "<group>"; };
 		EF7B8893257659F700B5F327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				EF7B88A725765D3B00B5F327 /* MapViewModel.swift */,
 				EF7B88AD2576709100B5F327 /* MapAnnotationView.swift */,
 				EF7B88AA25766D1000B5F327 /* Model.swift */,
+				EF6AB052257C6B5300A7A42A /* DetailView.swift */,
 				EF7B8893257659F700B5F327 /* Assets.xcassets */,
 				EF7B8898257659F700B5F327 /* Info.plist */,
 				EF7B8895257659F700B5F327 /* Preview Content */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7B88AE2576709100B5F327 /* MapAnnotationView.swift in Sources */,
+				EF6AB053257C6B5300A7A42A /* DetailView.swift in Sources */,
 				EF7B88A425765CBD00B5F327 /* MapView.swift in Sources */,
 				EF7B8890257659F600B5F327 /* map_sampleApp.swift in Sources */,
 				EF7B88A825765D3B00B5F327 /* MapViewModel.swift in Sources */,
