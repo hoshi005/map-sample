@@ -12,6 +12,9 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     
+    @State private var showModal = false
+    @State private var selectedItem = MapItem()
+    
     @Namespace var namespace
     
     var body: some View {
@@ -30,6 +33,12 @@ struct MapView: View {
                     anchorPoint: CGPoint(x: 0.5, y: 1.0)
                 ) {
                     MapAnnotationView(item: item, namespace: namespace)
+                        .onTapGesture {
+                            withAnimation {
+                                showModal.toggle()
+                                selectedItem = item
+                            }
+                        }
                 }
             }
             .ignoresSafeArea()
